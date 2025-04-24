@@ -1,0 +1,121 @@
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: rgb(136, 134, 131);
+    /* display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center; */
+}
+
+.dd {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    border: solid 1px;
+    padding: 5px 15px;
+    margin: 50px 100px 10px 100px;
+}
+
+
+.contianer {
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+    /* margin: auto; */
+    /* background-color: blueviolet; */
+}
+
+.border {
+    background-color: black;
+    color: white;
+    width: 600px;
+    height: 600px;
+    animation: borderAnimation 3s infinite;
+}
+
+
+.pad {
+    position: absolute;
+    background-color: aqua;
+    width: 100px;
+    height: 15px;
+    /* border-radius: 15px; */
+    /* border-top-right-radius: 50%;
+    border-top-left-radius: 50%; * /
+    /* display: none; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.ball {
+    position: absolute;
+    background-color: orange;
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    /* display: none; */
+    z-index: 1;
+}
+
+.brickContainer {
+    position: absolute;
+}
+
+.brick {
+    background-color: aqua;
+    position: absolute;
+}
+
+.fix {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: auto auto auto auto auto;
+    justify-content: center;
+    margin-top: 15px;
+
+}
+
+
+/* @keyframes borderAnimation {
+    0% {
+        border: 5px solid red;
+    }
+
+    50% {
+        border: 5px solid yellow;
+    }
+
+    100% {
+        border: 5px solid red;
+    }
+} */
+
+@media (max-width: 768px) {
+
+    .dd {
+        display: flex;
+        justify-content: space-between;
+        border: solid 1px;
+        gap: 10px;
+        padding: 5px 15px;
+        margin: 50px 100px 10px 100px;
+    }
+
+    .border {
+        background-color: black;
+        color: white;
+        width: 80%;
+        height: 600px;
+        animation: borderAnimation 3s infinite;
+    }
+
+    .pad {
+        width: 15%;
+        height: 15px;
+    }
+}
