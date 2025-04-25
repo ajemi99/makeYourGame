@@ -71,8 +71,7 @@ export function checkBrickCollision() {
             score.textContent = scoreCount
          }
 
-         if (scoreCount === 20) {
-            console.log("dd");
+         if (scoreCount == 20) {
             
             checkWin()
          }

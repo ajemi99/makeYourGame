@@ -1,5 +1,5 @@
 body {
-
+   
     margin: 0;
     padding: 0;
     background-color: rgb(136, 134, 131);
@@ -59,7 +59,7 @@ body {
     height: 15px;
     border-radius: 100%;
     /* display: none; */
-    z-index: 1;
+    /* z-index: 1; */
 }
 
 .brickContainer {
@@ -70,6 +70,25 @@ body {
     background-color: aqua;
     position: absolute;
 }
+.win{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    position: absolute;
+    margin-top: 30%; 
+}
+
+.again {
+    text-align: center;
+    background-color: aqua;
+    width: 90px;
+    height: 40px;
+    cursor: pointer;
+    border: solid 2px black;
+    border-radius: 15px;
+}
+
 
 .fix {
     display: grid;

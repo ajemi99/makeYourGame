@@ -29,7 +29,7 @@ import { checkBrickCollision } from "./app/brick.js"
 
 
     addEventListener("resize", () => {
-      this.location.reload()  
+        location.reload()  
     })
 
 
@@ -74,27 +74,57 @@ import { checkBrickCollision } from "./app/brick.js"
 
     timeGame()
 
-    export function checkWin() {
-        console.log('ff');
+    
+    const again = document.querySelector(".again")
         
-        cancelAnimationFrame(cancel)
-                removeEventListener("keydown", click)
+    if (again) {
+        again.addEventListener("click", () => {
+            location.reload
+        })
     }
-
-
-
+   
+    
     // game loop !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-
+    
     
     let cancel
+    let isRunning = true
     function gameLoop() {
+        if (!isRunning) {
+             return
+        }
+        checkBrickCollision()
         
-       checkBrickCollision()
-
         moves()
         moveBall()
         cancel = requestAnimationFrame(gameLoop)
     }
+    const continair = document.querySelector(".contianer")
+    
+    export function checkWin() {
+        isRunning = false
+       const div = document.createElement("div")
+       const button = document.createElement('button')
+       const p = document.createElement('p')
+
+       button.className = "again"
+       button.textContent = "again"
+
+       p.innerHTML = "<strong> 🎉 Congrat 🎉"
+
+
+       div.className = "win"
+       div.style.width = "300px"
+       div.style.height = "100px"
+       div.style.backgroundColor = "gray"
+
+       div.append(p, button)
+       continair.appendChild(div)
+
+    }
+
+   
+
 
 
    
@@ -166,8 +196,5 @@ import { checkBrickCollision } from "./app/brick.js"
         restart.style.display = "none"
         location.reload()
     })
-
-
-
 
 
